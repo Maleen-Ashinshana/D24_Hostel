@@ -35,7 +35,9 @@ public class DashboardFormController {
 
     }
 
-    public void btnRoomOnAction(ActionEvent actionEvent) {
+    public void btnRoomOnAction(ActionEvent actionEvent) throws IOException {
+        subpage.getChildren().clear();
+        Navigation.navigate(Routes.ROOM,subpage);
 
     }
 
