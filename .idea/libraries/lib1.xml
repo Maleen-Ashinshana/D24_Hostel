@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/D24Hostel/out/production/D24Hostel/lk/ijse/hostel/lib/mysql-connector-java-8.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/D24Hostel/out/production/D24Hostel/lk/ijse/hostel/lib/lombok.jar!/" />
+      <root url="jar://$PROJECT_DIR$/D24Hostel/out/production/D24Hostel/lk/ijse/hostel/lib/jfoenix-8.0.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/D24Hostel/out/production/D24Hostel/lk/ijse/hostel/lib/AnimateFX-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/D24Hostel/out/production/D24Hostel/lk/ijse/hostel/lib/fontawesomefx-8.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

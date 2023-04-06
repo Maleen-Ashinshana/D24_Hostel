@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="875.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostel.controller.DashboardFormController">
+   <children>
+      <VBox prefHeight="876.0" prefWidth="351.0" style="-fx-background-color: #4C2149;">
+         <children>
+            <Pane prefHeight="173.0" prefWidth="315.0">
+               <children>
+                  <Label layoutX="167.0" layoutY="80.0" text="D24" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIcon fill="WHITE" glyphName="XING" layoutX="135.0" layoutY="118.0" size="50" />
+               </children>
+            </Pane>
+            <JFXButton onAction="#btnDashBoard" prefHeight="61.0" prefWidth="351.0" text="DashBoard" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#btnStudentOnAction" prefHeight="61.0" prefWidth="351.0" text="Student" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#btnRoomOnAction" prefHeight="61.0" prefWidth="351.0" text="Rooms" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#btnReservationOnACtion" prefHeight="61.0" prefWidth="351.0" text="Reservation" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="subpage" layoutX="351.0" layoutY="1.0" prefHeight="875.0" prefWidth="981.0">
+         <children>
+            <Pane layoutY="-2.0" prefHeight="173.0" prefWidth="981.0" style="-fx-background-color: #9b4395;">
+               <children>
+                  <Label layoutX="415.0" layoutY="59.0" text="DashBoard" textFill="WHITE">
+                     <font>
+                        <Font name="System Italic" size="34.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="47.0" layoutY="236.0" text="All Rooms">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="46.0" layoutY="347.0" text="Current Rooms">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="464.0" text="Room Type">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="574.0" text="Qty">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="comType" layoutX="50.0" layoutY="514.0" prefHeight="50.0" prefWidth="179.0" promptText="type" />
+            <Label fx:id="lblAllRooms" layoutX="47.0" layoutY="276.0" prefHeight="50.0" prefWidth="150.0">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCurrentRooms" layoutX="47.0" layoutY="387.0" prefHeight="50.0" prefWidth="150.0">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblQty" layoutX="54.0" layoutY="614.0" prefHeight="50.0" prefWidth="150.0">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tblRemain" layoutX="441.0" layoutY="326.0" prefHeight="291.0" prefWidth="537.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="136.0" text="Student Id" />
+                <TableColumn fx:id="colname" prefWidth="181.0" text="Student Name" />
+                  <TableColumn fx:id="colKyeMoney" prefWidth="251.0" text="KeyMoney" />
+              </columns>
+            </TableView>
+            <Label layoutX="491.0" layoutY="281.0" text="Remaing Key Money Student">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="941.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostel.controller.LoginFormController">
+   <children>
+      <AnchorPane layoutX="-275.0" layoutY="516.0" prefHeight="200.0" prefWidth="237.0" style="-fx-background-color: red;" />
+      <AnchorPane fx:id="layer2" layoutX="-1.0" prefHeight="607.0" prefWidth="384.0" style="-fx-background-color: #4C2149;">
+         <children>
+            <Label layoutX="124.0" layoutY="214.0" text="D24 Hostel" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="124.0" prefHeight="88.0" prefWidth="301.0" text="Welcome!" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="60.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="singIn" buttonType="RAISED" layoutX="112.0" layoutY="300.0" onMouseClicked="#btnOnCliked2" prefHeight="39.0" prefWidth="186.0" ripplerFill="#d0d0d0" style="-fx-background-color: #4C2149; -fx-background-radius: 20 20 20 20;" text="SING IN" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="singUp" buttonType="RAISED" layoutX="112.0" layoutY="304.0" onMouseClicked="#btnOnCliked" prefHeight="39.0" prefWidth="186.0" ripplerFill="#d0d0d0" style="-fx-background-color: #4C2149; -fx-background-radius: 20 20 20 20;" text="SING UP" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="layer1" layoutX="383.0" prefHeight="607.0" prefWidth="559.0">
+         <children>
+            <Label fx:id="lblSign" layoutX="151.0" layoutY="90.0" text="Sigin In To D24 hostel" textFill="#4c2149">
+               <font>
+                  <Font name="Avignon Pro Demi Italic" size="25.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtUserName" layoutX="138.0" layoutY="189.0" prefHeight="45.0" prefWidth="287.0" promptText="User Name" />
+            <JFXButton fx:id="underSingIn1" buttonType="RAISED" layoutX="207.0" layoutY="403.0" onAction="#btnSingInOnAction" prefHeight="39.0" prefWidth="162.0" style="-fx-background-color: #4C2149; -fx-background-radius: 20 20 20 20;" text="SING IN" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXPasswordField fx:id="txtPassword" layoutX="138.0" layoutY="264.0" prefHeight="45.0" prefWidth="287.0" promptText="Password" />
+            <JFXButton fx:id="btnForget" layoutX="116.0" layoutY="340.0" onAction="#btnFrogetPasswordOnAction" prefHeight="39.0" prefWidth="315.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.scene.control.Label?&gt;&lt;?import javafx.scene.text.Font?&gt;&lt;Label layoutX=&quot;160.0&quot; layoutY=&quot;102.0&quot; text=&quot;Sign In To D24 hostel&quot; textFill=&quot;#4c2149&quot; xmlns=&quot;http://javafx.com/javafx/8.0.171&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot;&gt;   &lt;font&gt;      &lt;Font name=&quot;Avignon Pro Demi Italic&quot; size=&quot;25.0&quot; /&gt;   &lt;/font&gt;&lt;/Label&gt;; -fx-background-radius: 20 20 20 20;" text="Forget Your Password?" textFill="#4c2149">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtId" layoutX="137.0" layoutY="134.0" prefHeight="45.0" prefWidth="287.0" promptText="id" />
+            <Label fx:id="lblCreateAccount" layoutX="181.0" layoutY="91.0" text="Create Account" textFill="#4c2149">
+               <font>
+                  <Font name="Avignon Pro Demi Italic" size="25.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="underSingUp" buttonType="RAISED" layoutX="207.0" layoutY="353.0" onAction="#btnSingUpOAction" prefHeight="39.0" prefWidth="162.0" style="-fx-background-color: #4C2149; -fx-background-radius: 20 20 20 20;" text="SING UP" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

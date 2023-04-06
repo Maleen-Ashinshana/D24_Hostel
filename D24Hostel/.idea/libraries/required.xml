@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="required">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/lk/ijse/hostel/lib/AnimateFX-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lk/ijse/hostel/lib/fontawesomefx-8.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lk/ijse/hostel/lib/jfoenix-8.0.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lk/ijse/hostel/lib/lombok.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lk/ijse/hostel/lib/mysql-connector-java-8.0.11.jar!/" />
+      <root url="file://$PROJECT_DIR$/src/lk/ijse/hostel/lib/required" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/src/lk/ijse/hostel/lib/required" recursive="false" />
+  </library>
+</component>
