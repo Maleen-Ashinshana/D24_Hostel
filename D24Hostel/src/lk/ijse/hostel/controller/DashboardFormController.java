@@ -41,7 +41,8 @@ public class DashboardFormController {
 
     }
 
-    public void btnReservationOnACtion(ActionEvent actionEvent) {
-
+    public void btnReservationOnACtion(ActionEvent actionEvent) throws IOException {
+        subpage.getChildren().clear();
+        Navigation.navigate(Routes.RESERVATION,subpage);
     }
 }

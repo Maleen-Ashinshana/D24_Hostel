@@ -25,7 +25,9 @@ public class Navigation {
             case ROOM:
                 initUI("roomForm.fxml");
                 break;
-
+            case RESERVATION:
+                initUI("resrvationForm.fxml");
+                break;
             default:
                 new Alert(Alert.AlertType.ERROR, "Not suitable UI found!").show();
         }
