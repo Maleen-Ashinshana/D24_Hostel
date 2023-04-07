@@ -13,15 +13,12 @@ import lk.ijse.hostel.service.ServiceTypes;
 import lk.ijse.hostel.service.custome.StudentService;
 import lk.ijse.hostel.service.exception.DuplicateException;
 import lk.ijse.hostel.service.exception.NotFoundException;
-import lk.ijse.hostel.util.FactoryConfiguration;
-import org.hibernate.Session;
-import tm.StudentTM;
+
+import lk.ijse.hostel.tm.StudentTm;
 
 
-import java.awt.event.ActionEvent;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.PrimitiveIterator;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -45,7 +42,7 @@ public class StudentFormController {
     private JFXTextField txtGender;
 
     @FXML
-    private TableView<StudentTM> tblStudent;
+    private TableView<StudentTm> tblStudent;
 
     @FXML
     private TableColumn colId;
@@ -71,7 +68,7 @@ public class StudentFormController {
     private Pattern dobPattern;
     private Pattern genderPattern;
     public StudentService studentService;
-    public StudentTM studentTM;
+
     public void initialize() throws SQLException, ClassNotFoundException {
         pattern();
         studentView();
@@ -130,8 +127,9 @@ public class StudentFormController {
             boolean isAdded=studentService.saveStudent(studentDTO);
             if (isAdded){
                 new Alert(Alert.AlertType.CONFIRMATION,"Student Added  Successful").show();
-                tblStudent.getItems().add(new StudentTM(studentDTO.getStudentId(),studentDTO.getStudentName(),
-                        studentDTO.getAddress(),studentDTO.getContact_number(),studentDTO.getDate_of_birth(),studentDTO.getGender()));
+                tblStudent.getItems().add(new StudentTm(studentDTO.getStudentId(),studentDTO.getStudentName(),studentDTO.getAddress(),studentDTO.getContact_number(),studentDTO.getDate_of_birth(),studentDTO.getGender()));
+                /*tblStudent.getItems().add(new Stude(studentDTO.getStudentId(),studentDTO.getStudentName(),
+                        studentDTO.getAddress(),studentDTO.getContact_number(),studentDTO.getDate_of_birth(),studentDTO.getGender()));*/
                 txtId.clear();
                 txtName.clear();
                 txtAddress.clear();
@@ -179,9 +177,11 @@ public class StudentFormController {
     private void loadAllStudent() throws SQLException {
        // System.out.println(studentTM.getStudentId());
         System.out.println("**************");
-        List<StudentTM> collect=studentService.getAllStudent().stream().map(studentDTO -> new StudentTM
-                (studentDTO.getStudentId(), studentDTO.getStudentName(), studentDTO.getAddress(), studentDTO.getContact_number(),
-                        studentDTO.getDate_of_birth(), studentDTO.getGender())).collect(Collectors.toList());
+        List<StudentTm> collect=studentService.getAllStudent().stream().map(studentDTO -> new StudentTm(
+                studentDTO.getStudentId(), studentDTO.getStudentName(), studentDTO.getAddress(), studentDTO.getContact_number(),
+                studentDTO.getDate_of_birth(), studentDTO.getGender())).collect(Collectors.toList());
+
+
         System.out.println("++++++++++++++++");
         tblStudent.setItems(FXCollections.observableArrayList(collect));
         System.out.println("-----------------");

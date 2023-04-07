@@ -1,4 +1,4 @@
-package tm;
+package lk.ijse.hostel.tm;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,11 +9,12 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class StudentTM {
+public class StudentTm {
     private String studentId;
     private String StudentName;
     private String address;
     private int contact_number;
     private String date_of_birth;
     private String gender;
+
 }

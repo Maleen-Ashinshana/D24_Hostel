@@ -13,6 +13,7 @@ import lk.ijse.hostel.service.util.Convertor;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class StudentServiceIMPL implements StudentService {
@@ -31,8 +32,11 @@ public class StudentServiceIMPL implements StudentService {
 
     @Override
     public StudentDTO searchStudent(String id) throws NotFoundException {
-        StudentEntity se=studentDAO.search(id);
-        return new StudentDTO(se.getStudentId(),se.getStudentName(),se.getAddress(),se.getContact_number(),se.getDate_of_birth(),se.getGender());
+        /*StudentEntity se=studentDAO.search(id);
+        return new StudentDTO(se.getStudentId(),se.getStudentName(),se.getAddress(),se.getContact_number(),se.getDate_of_birth(),se.getGender());*/
+        Optional<StudentEntity>studentEntity= Optional.ofNullable(studentDAO.search(id));
+        if (!studentEntity.isPresent())throw new NotFoundException("Student No Found") ;
+        return convertor.fromStudent(studentEntity.get());
     }
 
     @Override
@@ -46,8 +50,7 @@ public class StudentServiceIMPL implements StudentService {
     }
 
     @Override
-    public List<StudentDTO> getAllStudent() throws SQLException {
-
+    public List<StudentDTO> getAllStudent() {
         return studentDAO.getAll().stream().map(ss -> convertor.fromStudent(ss)).collect(Collectors.toList());
 
     }
