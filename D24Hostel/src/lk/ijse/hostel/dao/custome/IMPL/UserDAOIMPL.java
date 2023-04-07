@@ -48,7 +48,7 @@ public class UserDAOIMPL implements UserDAO {
     }
 
     @Override
-    public ArrayList<UserEntity> getAll() throws SQLException, ClassNotFoundException {
+    public ArrayList<UserEntity> getAll()  {
         return null;
     }
 }

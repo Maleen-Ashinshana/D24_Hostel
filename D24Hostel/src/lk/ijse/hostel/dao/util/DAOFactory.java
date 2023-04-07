@@ -4,6 +4,7 @@ package lk.ijse.hostel.dao.util;
 /*import lk.ijse.hostel.dao.custom.impl.RoomDAOIMPL;
 import lk.ijse.hostel.dao.custom.impl.StudentDAOIMPL;
 import lk.ijse.hostel.dao.custom.impl.UserDAOIMPL;*/
+import lk.ijse.hostel.dao.custome.IMPL.StudentDAOIMPL;
 import lk.ijse.hostel.dao.custome.IMPL.UserDAOIMPL;
 
 public class DAOFactory {
@@ -19,6 +20,8 @@ public class DAOFactory {
         switch (daoTypes){
             case USER:
                 return new UserDAOIMPL();
+            case STUDENT:
+                return new StudentDAOIMPL();
         /*    case STUDENT:
                 return new StudentDAOIMPL();
             case ROOM:

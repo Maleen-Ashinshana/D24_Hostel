@@ -9,6 +9,7 @@ import lk.ijse.hostel.service.exception.NotFoundException;
 import java.io.Serializable;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 public interface CrudDAO<T extends SuperEntity,ID extends Serializable> extends  SuperDAO {
 /*    T save(T entity) throws  ConstraintViolationException;
@@ -24,5 +25,5 @@ public interface CrudDAO<T extends SuperEntity,ID extends Serializable> extends 
      public boolean delete(String id) ;
              /*NotFoundException*/;
      public T search(ID id) throws ConstraintViolationException;
-     public ArrayList<T> getAll()throws SQLException,ClassNotFoundException;
+     public List<T> getAll();
 }

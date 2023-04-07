@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="875.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostel.controller.StudentFormController">
    <children>
       <Pane prefHeight="171.0" prefWidth="981.0" style="-fx-background-color: #9b4395;">
@@ -57,22 +56,22 @@
          </font>
       </Label>
       <JFXTextField fx:id="txtGender" layoutX="421.0" layoutY="458.0" prefHeight="44.0" prefWidth="192.0" promptText="gender" />
-      <JFXButton layoutX="767.0" layoutY="233.0" onAction="#btnAddOnAction" prefHeight="44.0" prefWidth="166.0" style="-fx-background-color: #4C2149;" text="Add" textFill="WHITE">
+      <JFXButton layoutX="767.0" layoutY="233.0" onAction="#btnSAddOnAction" prefHeight="44.0" prefWidth="166.0" style="-fx-background-color: #4C2149;" text="Add" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="767.0" layoutY="285.0" onAction="#btnDeleteOnAction" prefHeight="44.0" prefWidth="166.0" style="-fx-background-color: #4C2149;" text="Delete" textFill="WHITE">
+      <JFXButton layoutX="767.0" layoutY="285.0" onAction="#btnSDeleteOnAction" prefHeight="44.0" prefWidth="166.0" style="-fx-background-color: #4C2149;" text="Delete" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="767.0" layoutY="341.0" onAction="#btnUpdateOnAction" prefHeight="44.0" prefWidth="166.0" style="-fx-background-color: #4C2149;" text="Update" textFill="WHITE">
+      <JFXButton layoutX="767.0" layoutY="341.0" onAction="#btnSUpdateOnAction" prefHeight="44.0" prefWidth="166.0" style="-fx-background-color: #4C2149;" text="Update" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="766.0" layoutY="396.0" onAction="#btnSearchOnAction" prefHeight="44.0" prefWidth="166.0" style="-fx-background-color: #4C2149;" text="Search" textFill="WHITE">
+      <JFXButton layoutX="766.0" layoutY="396.0" onAction="#BtnStSearchOnAction" prefHeight="44.0" prefWidth="166.0" style="-fx-background-color: #4C2149;" text="Search" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
